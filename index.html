@@ -22,8 +22,8 @@
                     <label>Email Address</label><br>
                     <input></input><br>
                     <label>Password</label><br>
-                    <input></input><br>
-                    <button class="submit">Sign Up</button>
+                    <input></input><br><br>
+                    <submit class="submit">Sign Up</submit>
                 </form>
             </div>
         
@@ -32,17 +32,24 @@
                 <h2></h2>
                 <p>You have been registered for this awesome service. Please check your email listed below for instructions.</p>
                 <p></p>
-                <button class="signin">Sign In</button>
+                <submit class="signin">Sign In</submit>
             </div>
         </div>
 
         <script>
-        
-            const submit = document.querySelector('.submit');
-            submit.addEventListener('click', function() {
-                document.querySelector('.signup').style.visibility = "hidden";
-                document.querySelector('.success').style.visibility= "visible";
-            });
+
+            window.onload = (event) => {
+                console.log("window loaded");
+                document.querySelector('.signup').style.visibility = "visible";
+                document.querySelector('.success').style.visibility = "hidden";
+
+                const submit = document.querySelector('.submit');
+                submit.onclick = (event) => {
+                    console.log("clicked once");
+                    document.querySelector('.signup').style.visibility = "hidden";
+                    document.querySelector('.success').style.visibility = "visible";
+                 };
+            };
             
         </script>
     </body>
