@@ -22,11 +22,15 @@ body {
 
 
 .submit, .signin {
-    position: relative;
-    left: 220px;
+position: relative;
+left: 220px;
  color: white;
  background-color:red;
  border: none;
  padding: 5px 15px;
  border-radius: 5px;
+}
+
+.signin {
+    left: 225px;
 }
