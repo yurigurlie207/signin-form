@@ -8,7 +8,6 @@
 	<link rel="stylesheet" href="main.css">
 </head>
 
-<html>
     <body>
         <div class="container">
             <div class="signup">
@@ -24,7 +23,7 @@
                     <input></input><br>
                     <label>Password</label><br>
                     <input></input><br>
-                    <submit>Submit</submit>
+                    <submit class="submit">Submit</submit>
                 </form>
             </div>
         
@@ -33,13 +32,19 @@
                 <h2></h2>
                 <p>You have been registered for this awesome service. Please check your email listed below for instructions.</p>
                 <p></p>
-                <button>Sign In</button>
+                <button class="signup">Sign In</button>
             </div>
         </div>
 
+        <script>
+        
+            const submit = document.querySelector('.submit');
+            submit.addEventListener('click', function() {
+                document.querySelector('.signup').style.visibility = "hidden";
+                document.querySelector('.success').style.visibility= "visible";
+            });
+
+            
+        </script>
     </body>
 </html>
-
-<script>
-
-</script>
