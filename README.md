@@ -1,5 +1,3 @@
 # signin-form
-# Put in name and email into success box from form
-# Form validation?
-OR
-# Implements Accessibility Features
+# validated with: 
+https://validator.w3.org/
