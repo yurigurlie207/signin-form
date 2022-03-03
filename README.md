@@ -1,3 +1,5 @@
 # signin-form
-# Uses Bootstrap (? or just css grid)
+# Put in name and email into success box from form
+# Form validation?
+OR
 # Implements Accessibility Features
