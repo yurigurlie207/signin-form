@@ -18,20 +18,20 @@
                 </p>
                 <form>
                     <label>First Name</label><br>
-                    <input></input><br>
+                    <input id="name"></input><br>
                     <label>Email Address</label><br>
-                    <input></input><br>
+                    <input id="email"></input><br>
                     <label>Password</label><br>
-                    <input></input><br><br>
+                    <input id="password"></input><br><br>
                     <submit class="submit">Sign Up</submit>
                 </form>
             </div>
         
             <div class="success">
                 <h1>Welcome,</h1>
-                <h2>First Name</h2>
+                <h2 id="displayname">First Name</h2>
                 <p>You have been registered for this awesome service. Please check your email listed below for instructions.</p>
-                <p class="email">adrienne.yao@gmail.com</p>
+                <p id="displayemail" class="email">adrienne.yao@gmail.com</p>
                 <submit class="signin">Sign In</submit>
             </div>
         </main>
@@ -48,6 +48,12 @@
                     console.log("clicked once");
                     document.querySelector('.signup').style.visibility = "hidden";
                     document.querySelector('.success').style.visibility = "visible";
+
+                    let name = document.getElementById("name").value;
+                    let email = document.getElementById('email').value;
+
+                    document.getElementById("displayname").innerHTML = name + "!";
+                    document.getElementById("displayemail").innerHTML = email;
                  };
             };
             
