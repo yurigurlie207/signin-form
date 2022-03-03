@@ -20,6 +20,9 @@ body {
     max-width: 300px;
     box-shadow: 0 0 10px #d7d7d7;
 }
+.success {
+    max-width: 350px;
+}
 
 /* BUTTONS */
 .submit, .signin {
@@ -37,21 +40,23 @@ left: 220px;
     left: 225px;
 }
 
-/* SIGNUP FONT STYLES */
-.signup h1 {
+/* FONT STYLES */
+h1 {
     font-weight: normal;
     font-size: 20px;
 }
-.signup h2 {
+h2 {
     font-size: 22px
 }
-.signup h1, .signup h2 {
+h1,h2 {
     line-height: 8px;
 }
-.signup p {
+p{
     font-size: 14px;
 }
-
+p.email {
+    font-weight: bold;
+}
 
 /* FORM STYLES */
 .signup label{
