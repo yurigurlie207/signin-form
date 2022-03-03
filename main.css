@@ -24,21 +24,6 @@ body {
     max-width: 350px;
 }
 
-/* BUTTONS */
-.submit, .signin {
-position: relative;
-left: 220px;
- color: white;
- background-color:red;
- border: none;
- padding: 7px 19px;
- border-radius: 5px;
- font-size: 14px;
-}
-
-.signin {
-    left: 275px;
-}
 
 
 /* FONT STYLES */
@@ -85,3 +70,20 @@ p.email {
     padding: 3px;
 }
 
+/* BUTTONS */
+input.submit, input.signin {
+    position: relative;
+    left: 228px;
+    width: 80px;
+     color: white;
+     background-color:red;
+     border: none;
+     padding: 7px 7px;
+     border-radius: 5px;
+     font-size: 14px;
+    }
+    
+    input.signin {
+        left: 275px;
+    }
+    
