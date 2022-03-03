@@ -9,6 +9,7 @@ body {
      height: 100vh;
 }
 
+/* MAIN BOXES */
 .signup, .success {
     background-color: white;
     border-radius: 8px;
@@ -20,17 +21,49 @@ body {
     box-shadow: 0 0 10px #d7d7d7;
 }
 
-
+/* BUTTONS */
 .submit, .signin {
 position: relative;
 left: 220px;
  color: white;
  background-color:red;
  border: none;
- padding: 5px 15px;
+ padding: 7px 19px;
  border-radius: 5px;
+ font-size: 14px;
 }
 
 .signin {
     left: 225px;
 }
+
+/* SIGNUP FONT STYLES */
+.signup h1 {
+    font-weight: normal;
+    font-size: 20px;
+}
+.signup h2 {
+    font-size: 22px
+}
+.signup h1, .signup h2 {
+    line-height: 8px;
+}
+.signup p {
+    font-size: 14px;
+}
+
+
+/* FORM STYLES */
+.signup label{
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.signup input {
+    margin: 5px 0px;
+    border: solid 1px rgb(216, 215, 215);
+    border-radius: 5px;
+    width: 100%;
+    padding: 3px;
+}
+
