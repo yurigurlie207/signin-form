@@ -37,25 +37,38 @@ left: 220px;
 }
 
 .signin {
-    left: 225px;
+    left: 275px;
 }
+
 
 /* FONT STYLES */
 h1 {
     font-weight: normal;
     font-size: 20px;
 }
+.success h1 {
+    font-size: 24px;
+}
 h2 {
     font-size: 22px
+}
+.success h2 {
+    font-size: 24px;
 }
 h1,h2 {
     line-height: 8px;
 }
+
+
 p{
     font-size: 14px;
 }
 p.email {
     font-weight: bold;
+    padding-bottom: 20px;
+}
+.success p {
+    padding-top: 5px;
 }
 
 /* FORM STYLES */
