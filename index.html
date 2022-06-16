@@ -59,39 +59,39 @@
 
                  //testing grounds here;
                  console.log("HM");
-                 //document.onload = function () { 
     
-   // console.log("hm");
-    // let ingredients = {
-    //     egg: 4,
-    //     sausages: 2,
-    //     bread: 5,
-    //     coffee: 2
-    // }
-    
-    // const recipes = {
-    //     eggsandwich: {
-    //         egg: 2,
-    //         bread: 2
-    //     },
-    //     breakfast: {
-    //         eggsandwich: 1,
-    //         coffee: 1
-    //     }
-    // }
-    
-    // let hasIngredients = function(ingredients, recipes) {
-       
-    //     recipes.forEach( function (key)
-    //         {
-    //             document.write(key);
-    //             console.log("key");
-    //         }
-    //     )
-    
-    // }
+                let hasIngredients = function() {
+                    
+                    let ingredients = {
+                        'egg': 4,
+                        'sausages': 2,
+                        'bread': 5,
+                        'coffee': 2
+                    }
+                    console.log(ingredients);
 
-    // hasIngredients();
+                    const recipes = {
+                        'eggsandwich': {
+                            'egg': 2,
+                            'bread': 2
+                        },
+                        'breakfast': {
+                            'eggsandwich': 1,
+                            'coffee': 1
+                        }
+                    }
+                    
+                    for (const [key, value] of Object.entries(ingredients)) {
+                        console.log(key, value);
+                    }                   
+                }
+                
+                hasIngredients();
+
+
+                }
+
+                
 
 //}
 
@@ -105,7 +105,7 @@
 
 
 
-            };
+            //};
             
         </script>
     </body>
