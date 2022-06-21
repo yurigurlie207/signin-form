@@ -62,7 +62,7 @@
     
                 let hasIngredients = function() {
                     
-                    let ingredients = {
+                    let inventory = {
                         'egg': 4,
                         'sausages': 2,
                         'bread': 5,
@@ -81,8 +81,8 @@
                         }
                     }
                     
-                    for (const [key, value] of Object.entries(ingredients)) {
-                        console.log(key, value);
+                    for (const [ing, amt] of Object.entries(inventory)) {
+                        //console.log(key, value);
                     }                   
                 }
                 
