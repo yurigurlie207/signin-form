@@ -56,21 +56,19 @@
                     document.getElementById("displayemail").innerHTML = email;
                  };
 
+                /******************************************
+                  MY RECIPE FUNCTIONS (RECURSION PRACTICE)
+                *******************************************/
 
-                 //testing grounds here;
-                 console.log("HM");
-    
-                let hasIngredients = function() {
-                    
-                    let inventory = {
+                 let inventory = {
                         'egg': 4,
                         'sausages': 2,
                         'bread': 5,
                         'coffee': 2
                     }
-                    console.log(ingredients);
-
-                    const foods = {
+                    //console.log(inventory);
+                    
+                    const foodlist = {
                         'eggsandwich': {
                             'egg': 2,
                             'bread': 2
@@ -80,14 +78,34 @@
                             'coffee': 1
                         }
                     }
-                    
-                    for (const [ing, amt] of Object.entries(inventory)) {
-                        //console.log(key, value);
-                    }                   
-                }
-                
-                hasIngredients();
+    
+                    let hasIngredients = function(food, inventory) {
+                        let flag = true;
 
+                        for (const [ing, amt] of Object.entries(food)) {
+                            //console.log(ing, amt);
+                            if (!inventory[ing] || inventory[ing] < amt ) {
+                                flag = false;
+                               
+                            }
+                         }  
+
+                        // console.log("Invetory: ");
+                        // for (const [ing, amt] of Object.entries(inventory)) {
+                        //     console.log(ing, amt);
+                        // }  
+                        console.log("has ingredients: " + flag)
+                        return flag;
+                        
+                    }
+
+
+                
+                    //call my functions
+                    hasIngredients({'egg': 6,'bread': 2}, inventory);
+
+
+                    /******************************END OF RECIPE SNIPPET********************************/
 
                 }
 
