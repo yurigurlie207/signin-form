@@ -79,14 +79,14 @@
                         }
                     }
     
-                    let hasIngredients = function(food, inventory) {
+                    let hasIngredients = function(ingredients, inventory) {
                         let flag = true;
 
-                        for (const [ing, amt] of Object.entries(food)) {
+                        console.log("INGREDIENTS: " + JSON.stringify(ingredients))
+                        for (const [ing, amt] of Object.entries(ingredients)) {
                             //console.log(ing, amt);
                             if (!inventory[ing] || inventory[ing] < amt ) {
                                 flag = false;
-                               
                             }
                          }  
 
@@ -103,7 +103,7 @@
                         console.log(recipes)
                         for(const [recipe, ingredients] of Object.entries(recipes)) {
                             console.log("Recipe Name: " + recipe);
-                            hasIngredients(recipe, inventory);
+                            hasIngredients(ingredients, inventory);
                             //console.log("Ingredients Needed:" + ingredients);
                         }
                     }
@@ -112,7 +112,7 @@
                 
                     //call my functions
                     //hasIngredients({'egg': 6,'bread': 2}, inventory);
-                    iterateThroughRecipes(recipes);
+                    iterateThroughRecipes(recipes,inventory);
 
 
                     /******************************END OF RECIPE SNIPPET********************************/
