@@ -99,19 +99,20 @@
                         
                     }
 
-                    let iterateThroughRecipes = function(recipes) {
-                        for(const [recipe, ingredients] of Object.entries[recipes]) {
+                    let iterateThroughRecipes = function(recipes,inventory) {
+                        console.log(recipes)
+                        for(const [recipe, ingredients] of Object.entries(recipes)) {
                             console.log("Recipe Name: " + recipe);
-                            console.log("\n")
-                            console.log("Ingredients Needed:" + ingredients);
+                            hasIngredients(recipe, inventory);
+                            //console.log("Ingredients Needed:" + ingredients);
                         }
                     }
 
 
                 
                     //call my functions
-                    hasIngredients({'egg': 6,'bread': 2}, inventory);
-                    iterateThroughRecipes(recipes)
+                    //hasIngredients({'egg': 6,'bread': 2}, inventory);
+                    iterateThroughRecipes(recipes);
 
 
                     /******************************END OF RECIPE SNIPPET********************************/
