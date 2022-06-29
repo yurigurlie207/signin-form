@@ -78,11 +78,13 @@
                             'coffee': 1
                         }
                     }
-    
+                    
+                    /**** HAS INGREDEINTS ? ****/
                     let hasIngredients = function(ingredients, inventory) {
                         let flag = true;
 
                         console.log("INGREDIENTS: " + JSON.stringify(ingredients))
+
                         for (const [ing, amt] of Object.entries(ingredients)) {
                             //console.log(ing, amt);
                             if (!inventory[ing] || inventory[ing] < amt ) {
@@ -99,16 +101,25 @@
                         
                     }
 
+                    /**** Iterate through RECIPES *****/
                     let iterateThroughRecipes = function(recipes,inventory) {
-                        console.log(recipes)
+                        console.log(recipes);
+                        let flat_ingredients = {};
+
                         for(const [recipe, ingredients] of Object.entries(recipes)) {
                             console.log("Recipe Name: " + recipe);
+                            flat_ingredients = flattenRecipe(recipe, recipes) //pass in the recipe i'm looking up, and the full recipes list to check against, returns flattened ingredient list through recursion
+                            
                             hasIngredients(ingredients, inventory);
                             //console.log("Ingredients Needed:" + ingredients);
                         }
                     }
 
+                    /**** FLATTEN RECIPE if it contains another recipe*****/
+                    /*this should be my recursive function that returns the flattened ingredient list **/
+                    let flattenRecipe = function(recipe,recipes) {
 
+                    }
                 
                     //call my functions
                     //hasIngredients({'egg': 6,'bread': 2}, inventory);
