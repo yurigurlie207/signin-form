@@ -109,11 +109,6 @@
                         for(const [recipe, ingredients] of Object.entries(recipes)) {
                             console.log("Recipe Name: " + recipe);
                             flat_ingredients = flattenRecipe(recipe, recipes) //pass in the recipe i'm looking up, and the full recipes list to check against, returns flattened ingredient list through recursion
-                            
-                            //so the logic should be:
-                            //if the recipe exists in recipes, go into the flatten file, and return the flattened recipe
-                            //build it in flattenRecipe first, adn then take out the lookup and put it in the recursion call above
-
 
                             console.log("flattened ingredients" + JSON.stringify(flat_ingredients));
 
@@ -127,7 +122,16 @@
                     let flattenRecipe = function(recipe,recipes) {
                         let ingredients = {}
 
+                       
+                        for(const [ingredient] of Object.entries(recipes[recipe])) {
+                            console.log("Is this ingredient also a recipe? " + ingredient)
+                            if (recipes[ingredient]) {
+                                console.log(ingredient + " IS ALSO A RECIPE!")
+                            }
+                        }
+                       
                         
+                
                         return ingredients;
                     }
                 
