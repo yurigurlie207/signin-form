@@ -76,6 +76,10 @@
                         'breakfast': {
                             'eggsandwich': 1,
                             'coffee': 1
+                        },
+                        'allday': {
+                            'breakfast': 1,
+                            'cookie': 1
                         }
                     }
                     
@@ -127,6 +131,7 @@
                             console.log("Is this ingredient also a recipe? " + ingredient)
                             if (recipes[ingredient]) {
                                 console.log(ingredient + " IS ALSO A RECIPE!")
+                                flattenRecipe(ingredient, recipes);
                             }
                         }
                        
