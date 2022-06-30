@@ -126,17 +126,18 @@
                     let flattenRecipe = function(recipe,recipes) {
                         let ingredients = {}
 
-                       
                         for(const [ingredient] of Object.entries(recipes[recipe])) {
                             console.log("Is this ingredient also a recipe? " + ingredient)
                             if (recipes[ingredient]) {
                                 console.log(ingredient + " IS ALSO A RECIPE!")
                                 flattenRecipe(ingredient, recipes);
                             }
+                            else {
+                                //inject the ingredient list into the ingredients var from this function
+                            }
                         }
                        
-                        
-                
+            
                         return ingredients;
                     }
                 
