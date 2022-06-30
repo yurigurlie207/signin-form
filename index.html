@@ -110,6 +110,13 @@
                             console.log("Recipe Name: " + recipe);
                             flat_ingredients = flattenRecipe(recipe, recipes) //pass in the recipe i'm looking up, and the full recipes list to check against, returns flattened ingredient list through recursion
                             
+                            //so the logic should be:
+                            //if the recipe exists in recipes, go into the flatten file, and return the flattened recipe
+                            //build it in flattenRecipe first, adn then take out the lookup and put it in the recursion call above
+
+
+                            console.log("flattened ingredients" + JSON.stringify(flat_ingredients));
+
                             hasIngredients(ingredients, inventory);
                             //console.log("Ingredients Needed:" + ingredients);
                         }
@@ -118,7 +125,10 @@
                     /**** FLATTEN RECIPE if it contains another recipe*****/
                     /*this should be my recursive function that returns the flattened ingredient list **/
                     let flattenRecipe = function(recipe,recipes) {
+                        let ingredients = {}
 
+                        
+                        return ingredients;
                     }
                 
                     //call my functions
