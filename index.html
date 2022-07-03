@@ -112,8 +112,8 @@
 
                         for(const [recipe, ingredients] of Object.entries(recipes)) {
                             console.log("Recipe Name: " + recipe);
-                            flat_ingredients = flattenRecipe(recipe, recipes) //pass in the recipe i'm looking up, and the full recipes list to check against, returns flattened ingredient list through recursion
-
+                            flattenRecipe(recipe, recipes, flat_ingredients) //pass in the recipe i'm looking up, and the full recipes list to check against, returns flattened ingredient list through recursion
+                            
                             console.log("flattened ingredients" + JSON.stringify(flat_ingredients));
 
                             hasIngredients(ingredients, inventory);
@@ -123,13 +123,15 @@
 
                     /**** FLATTEN RECIPE if it contains another recipe*****/
                     /*this should be my recursive function that returns the flattened ingredient list **/
-                    let flattenRecipe = function(recipe,recipes) {
-                        let ingredients = {}
+                    let flattenRecipe = function(recipe,recipes, flat_ingredients) {
+                        
                         console.log("HMM" + JSON.stringify(recipes[recipe]));
+
                         for(const [ingredient, amt] of Object.entries(recipes[recipe])) {
                             console.log("Is this ingredient also a recipe? " + ingredient)
                             if (!recipes[ingredient]) {
-                                
+                                console.log("ADD THIS: " + ingredient + " " + amt)
+                                //add this to passed in flat_ingredients list;
                             }
                             else {
                                 console.log(ingredient + " IS ALSO A RECIPE!")
