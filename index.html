@@ -64,7 +64,8 @@
                         'egg': 4,
                         'sausages': 2,
                         'bread': 5,
-                        'coffee': 2
+                        'coffee': 2,
+                        'cookie': 1
                     }
                     //console.log(inventory);
                     
@@ -113,10 +114,10 @@
                         for(const [recipe, ingredients] of Object.entries(recipes)) {
                             console.log("Recipe Name: " + recipe);
                             flattenRecipe(recipe, recipes, flat_ingredients) //pass in the recipe i'm looking up, and the full recipes list to check against, returns flattened ingredient list through recursion
-                            
+
                             console.log("flattened ingredients" + JSON.stringify(flat_ingredients));
 
-                            hasIngredients(ingredients, inventory);
+                            hasIngredients(flat_ingredients, inventory);
                             //console.log("Ingredients Needed:" + ingredients);
                         }
                     }
@@ -131,11 +132,12 @@
                             console.log("Is this ingredient also a recipe? " + ingredient)
                             if (!recipes[ingredient]) {
                                 console.log("ADD THIS: " + ingredient + " " + amt)
+                                flat_ingredients[ingredient] = amt;
                                 //add this to passed in flat_ingredients list;
                             }
                             else {
                                 console.log(ingredient + " IS ALSO A RECIPE!")
-                                flattenRecipe(ingredient, recipes);
+                                flattenRecipe(ingredient, recipes, flat_ingredients);
                             }
                             // if (recipes[ingredient]) {
                             //     console.log(ingredient + " IS ALSO A RECIPE!")
